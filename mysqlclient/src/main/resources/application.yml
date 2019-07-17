@@ -5,7 +5,7 @@ spring:
     name: mysqlclient
   datasource:
     driverClassName: com.mysql.jdbc.Driver  #driver-class-name
-    url: jdbc:mysql://127.0.0.1:3306/suxiaowei_test?characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/suxiaowei_test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: 123456
   jpa:

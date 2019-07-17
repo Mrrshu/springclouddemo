@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * @author 黑马程序员
+ * @author suxiaowei
  * @Company http://www.ithiema.com
  * 标签的实体类
  */

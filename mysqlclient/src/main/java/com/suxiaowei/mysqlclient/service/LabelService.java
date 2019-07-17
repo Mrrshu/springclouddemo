@@ -1,7 +1,6 @@
 package com.suxiaowei.mysqlclient.service;
 
 import com.suxiaowei.mysqlclient.dao.LabelDao;
-import com.suxiaowei.mysqlclient.dao.LabelDao;
 import com.suxiaowei.mysqlclient.pojo.Label;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,8 +9,8 @@ import com.suxiaowei.mysqlclient.util.IdWorker;
 import java.util.List;
 
 /**
- * @author 黑马程序员
- * @Company http://www.ithiema.com
+ * @author suxiaowei
+ * @Company
  * 标签的业务类
  */
 @Service

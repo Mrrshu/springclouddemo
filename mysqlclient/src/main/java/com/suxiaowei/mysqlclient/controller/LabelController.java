@@ -1,7 +1,7 @@
 package com.suxiaowei.mysqlclient.controller;
 
-import com.tensquare.base.pojo.Label;
-import com.tensquare.base.service.LabelService;
+import com.suxiaowei.mysqlclient.pojo.Label;
+import com.suxiaowei.mysqlclient.service.LabelService;
 import com.suxiaowei.mysqlclient.commonEntity.Result;
 import com.suxiaowei.mysqlclient.commonEntity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @author 黑马程序员
- * @Company http://www.ithiema.com
+ * @author suxiaowei
+ * @Company
  * 标签的控制器
  */
 @RestController
@@ -26,7 +26,7 @@ public class LabelController {
      * 查询所有标签
      * @return
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/selectall",method = RequestMethod.GET)
     public Result findAll(){
         int i = 1/0;
         //1.查询所有标签
@@ -40,7 +40,7 @@ public class LabelController {
      * @param id
      * @return
      */
-    @RequestMapping(value="/{id}",method=RequestMethod.GET)
+    @RequestMapping(value="/select/{id}",method=RequestMethod.GET)
     public Result findById(@PathVariable("id") String id){
         //1.根据id查询标签
         Label label = labelService.findById(id);
@@ -53,7 +53,7 @@ public class LabelController {
      * @param label
      * @return
      */
-    @RequestMapping(method=RequestMethod.POST)
+    @RequestMapping(value = "/save",method=RequestMethod.POST)
     public Result add(@RequestBody Label label){
         labelService.add(label);
         return new Result(true,StatusCode.OK,"保存成功");
@@ -65,7 +65,7 @@ public class LabelController {
      * @param label
      * @return
      */
-    @RequestMapping(value="/{id}",method=RequestMethod.PUT)
+    @RequestMapping(value="/update/{id}",method=RequestMethod.PUT)
     public Result update(@RequestBody Label label,@PathVariable("id") String id){
         label.setId(id);
         labelService.update(label);
@@ -78,7 +78,7 @@ public class LabelController {
      * @param id
      * @return
      */
-    @RequestMapping(value="/{id}",method=RequestMethod.DELETE)
+    @RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
     public Result delete(@PathVariable("id") String id){
         labelService.delete(id);
         return new Result(true,StatusCode.OK,"删除成功");

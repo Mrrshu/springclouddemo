@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author 黑马程序员
- * @Company http://www.ithiema.com
+ * @author suxiaowei
+ * @Company
  */
 @ControllerAdvice
 //@RestControllerAdvice
